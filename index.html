@@ -22,58 +22,53 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url('documents/wp2763910.gif'); /* Image .gif */
-            background-size: cover; /* Pour que l'image couvre toute la section */
-            background-position: center; /* Centrer l'image */
-            background-repeat: no-repeat; /* Empêcher la répétition */
-            background-attachment: fixed; /* Rendre l'image fixe */
+            background-image: url('documents/wp2763910.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
             text-align: center;
             font-size: 2rem;
             font-weight: bold;
             padding: 20px;
-            overflow: hidden; /* Cacher le texte qui sort des bords */
+            overflow: hidden;
         }
 
         /* Police calligraphique pour le texte */
         .header-text {
             opacity: 0;
-            white-space: nowrap; /* Empêcher le retour à la ligne */
-            animation: slide-in-out 12s infinite; /* Chaque cycle dure 12s */
-            font-family: 'Dancing Script', cursive; /* Appliquer la police calligraphique */
-            font-size: 3rem; /* Augmenter la taille du texte */
+            white-space: nowrap;
+            animation: slide-in-out 12s infinite;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
         }
 
         /* Animation pour le texte défilant avec pause après la sortie */
         @keyframes slide-in-out {
-            0% {
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            30% {
-                opacity: 1;
-            }
-            40% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
         }
 
         /* Ajuster l'apparition d'un texte à la fois */
-        #text-1 {
-            animation-delay: 0s; /* Démarre immédiatement */
+        #text-1 { animation-delay: 0s; }
+        #text-2 { animation-delay: 4s; }
+        #text-3 { animation-delay: 8s; }
+
+        /* Flèche de défilement */
+        .scroll-arrow {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: white;
+            animation: bounce 1.5s infinite;
         }
 
-        #text-2 {
-            animation-delay: 4s; /* Démarre après 4 secondes */
-        }
-
-        #text-3 {
-            animation-delay: 8s; /* Démarre après 8 secondes */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
         }
 
         .section {
@@ -109,9 +104,9 @@
 
         /* Détails en plus */
         .detail-item {
-            color: black; /* Couleur du texte */
-            font-size: 1.1rem; /* Taille de police (ajuste selon tes besoins) */
-            margin-bottom: 15px; /* Espace entre les éléments */
+            color: black;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
         /* Bouton personnalisé */
@@ -146,6 +141,7 @@
     <div class="header-text" id="text-1">Maxime Pascal</div>
     <div class="header-text" id="text-2">Alternant à l'IRUP</div>
     <div class="header-text" id="text-3">Chez: Vie et Véranda</div>
+    <div class="scroll-arrow">⬇️</div>
 </div>
 
 <!-- Détails en plus -->
@@ -214,7 +210,6 @@
 
 <!-- Script pour gérer l'animation de texte et des sections -->
 <script>
-    // Animation des sections lors du défilement
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
