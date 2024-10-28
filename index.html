@@ -77,19 +77,29 @@
             border-radius: 10px;
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
         }
 
-        .section h2 {
-            color: #006699;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 2rem;
+        /* Animation de transition */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .section h3, .section h5 {
-            font-size: 1.1rem;
-            color: #333;
-        }
+        .section:nth-of-type(2) { animation-delay: 0.2s; }
+        .section:nth-of-type(3) { animation-delay: 0.4s; }
+        .section:nth-of-type(4) { animation-delay: 0.6s; }
+        .section:nth-of-type(5) { animation-delay: 0.8s; }
+        .section:nth-of-type(6) { animation-delay: 1s; }
+        .section:nth-of-type(7) { animation-delay: 1.2s; }
     </style>
 </head>
 <body>
@@ -106,7 +116,7 @@
 
 <!-- Détails en plus -->
 <section id="details-en-plus" class="section">
-    <h2>Détails en plus</h2>
+    <h1 class="h2">Détails en plus</h1>
     <h3><strong>18 ans</strong></h3>
     <h3><strong>Permis B :</strong> Validé</h3>
 </section>
