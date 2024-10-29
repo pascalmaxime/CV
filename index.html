@@ -43,7 +43,6 @@
             font-size: 3rem;
         }
 
-        /* Animation pour le texte défilant avec pause après la sortie */
         @keyframes slide-in-out {
             0% { opacity: 0; }
             10% { opacity: 1; }
@@ -52,12 +51,10 @@
             100% { opacity: 0; }
         }
 
-        /* Ajuster l'apparition d'un texte à la fois */
         #text-1 { animation-delay: 0s; }
         #text-2 { animation-delay: 4s; }
         #text-3 { animation-delay: 8s; }
 
-        /* Flèche de défilement */
         .scroll-arrow {
             margin-top: 20px;
             font-size: 4rem;
@@ -95,10 +92,30 @@
             font-size: 2rem;
         }
 
+        .section p, .section ul {
+            font-size: 1.1rem;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        /* Détails en plus */
+        .detail-item {
+            color: black;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
         /* Styles identiques pour "18 ans", "Permis B", et "Piscines Desjoyaux" */
-        .same-style-h2 {
+        .same-style {
             color: #333;
             font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .details-h2 {
+            color: #333;
+            font-size: 1.25rem;
             font-weight: bold;
             margin-bottom: 15px;
         }
@@ -119,7 +136,6 @@
             background-color: #004d66;
         }
 
-        /* Footer */
         footer {
             background-color: #2c3e50;
             color: white;
@@ -130,7 +146,6 @@
 </head>
 <body>
 
-<!-- En-tête avec animation -->
 <div id="animated-header">
     <div class="header-text" id="text-1">Maxime Pascal</div>
     <div class="header-text" id="text-2">Alternant à l'IRUP</div>
@@ -138,25 +153,22 @@
     <div class="scroll-arrow">⬇️</div>
 </div>
 
-<!-- Détails en plus -->
 <section id="details-en-plus" class="section">
-    <h2 style="color: #006699; margin-bottom: 30px; font-weight: 700; text-transform: uppercase; font-size: 2rem;">
+    <h1 class="h2" style="color: #006699; margin-bottom: 30px; font-weight: 700; text-transform: uppercase; font-size: 2rem;">
         Détails en plus
-    </h2>
-    <h2 class="same-style-h2">18 ans</h2>
-    <h2 class="same-style-h2">Permis B : Validé</h2>
+    </h1>
+    <h2 class="details-h2">18 ans</h2>
+    <h2 class="details-h2">Permis B : Validé</h2>
 </section>
 
-<!-- Section Expériences -->
 <section id="experiences" class="section">
     <h2>Expériences</h2>
-    <h3 class="same-style-h2">Piscines Desjoyaux - Stage d'observation (14-18 novembre 2022)</h3>
+    <h3 class="same-style">Piscines Desjoyaux - Stage d'observation (14-18 novembre 2022)</h3>
     <p>Service Informatique</p>
-    <h3 class="same-style-h2">Piscines Desjoyaux - Stage découverte de Seconde (7-11 février 2022)</h3>
+    <h3 class="same-style">Piscines Desjoyaux - Stage découverte de Seconde (7-11 février 2022)</h3>
     <p>Service Informatique</p>
 </section>
 
-<!-- Section Compétences -->
 <section id="competences" class="section">
     <h2>Compétences</h2>
     <ul>
@@ -166,14 +178,12 @@
     </ul>
 </section>
 
-<!-- Section Formation -->
 <section id="formation" class="section">
     <h2>Formation</h2>
     <p><strong>Baccalauréat Général</strong> (Spécialité Mathématiques / Informatique et sciences du numérique)</p>
     <p>Lycée Saint-Pierre, Montrond-les-Bains</p>
 </section>
 
-<!-- Section Informations personnelles -->
 <section id="infos-personnelles" class="section">
     <h2>Informations personnelles</h2>
     <ul class="list-unstyled">
@@ -183,7 +193,6 @@
     </ul>
 </section>
 
-<!-- Section Centres d'intérêt -->
 <section id="interets" class="section">
     <h2>Centres d'intérêt</h2>
     <ul>
@@ -193,18 +202,15 @@
     </ul>
 </section>
 
-<!-- Section Téléchargement du CV -->
 <section id="telecharger-cv" class="section">
     <h2>Télécharger mon CV</h2>
     <a href="documents/cv_maxime_pascal.pdf" class="btn btn-custom" download="Maxime_Pascal_CV.pdf">Télécharger mon CV</a>
 </section>
 
-<!-- Pied de page -->
 <footer>
     <p>&copy; 2024 Maxime Pascal | Tous droits réservés</p>
 </footer>
 
-<!-- Script pour gérer l'animation de texte et des sections -->
 <script>
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -226,3 +232,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<!-- voir avec le prof! -->
