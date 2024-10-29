@@ -22,7 +22,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url('documents/wp2763910.gif');
+            background-image: url('documents/gif1.gif');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -87,18 +87,31 @@
             transform: translateY(0);
         }
 
-        .section h2, .detail-item, .experience-title {
+        .section h2 {
             color: #006699;
+            margin-bottom: 30px;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 2rem;
-            margin-bottom: 30px;
         }
 
-        /* Détails en plus - Uniformiser le style */
-        .detail-item {
+        .section p, .section ul {
             font-size: 1.1rem;
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        /* Détails en plus */
+        .detail-item {
+            color: black;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Styles identiques pour "18 ans", "Permis B", et "Piscines Desjoyaux" */
+        .same-style {
             color: #333;
+            font-size: 1.1rem;
             font-weight: bold;
             margin-bottom: 15px;
         }
@@ -143,16 +156,16 @@
     <h1 class="h2" style="color: #006699; margin-bottom: 30px; font-weight: 700; text-transform: uppercase; font-size: 2rem;">
         Détails en plus
     </h1>
-    <h2 class="detail-item">18 ans</h2>
-    <h2 class="detail-item">Permis B : Validé</h2>
+    <h2 class="same-style">18 ans</h2>
+    <h2 class="same-style">Permis B : Validé</h2>
 </section>
 
 <!-- Section Expériences -->
 <section id="experiences" class="section">
     <h2>Expériences</h2>
-    <h3 class="experience-title">Piscines Desjoyaux - Stage d'observation (14-18 novembre 2022)</h3>
+    <h3 class="same-style">Piscines Desjoyaux - Stage d'observation (14-18 novembre 2022)</h3>
     <p>Service Informatique</p>
-    <h3 class="experience-title">Piscines Desjoyaux - Stage découverte de Seconde (7-11 février 2022)</h3>
+    <h3 class="same-style">Piscines Desjoyaux - Stage découverte de Seconde (7-11 février 2022)</h3>
     <p>Service Informatique</p>
 </section>
 
