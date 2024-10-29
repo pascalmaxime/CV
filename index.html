@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Meta tags de base pour l'encodage et l'affichage sur mobile -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxime Pascal - CV</title>
+    
+    <!-- Import de Bootstrap et des polices Google Fonts pour un design moderne et responsive -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
     <style>
+        /* Style global pour le corps de la page */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #e0e4e8;
@@ -15,14 +20,14 @@
             padding: 0;
         }
 
-        /* Header avec animation */
+        /* Style de l'en-tête animé */
         #animated-header {
             height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-image: url('documents/gif1.gif');
+            background-image: url('documents/gif1.gif'); /* GIF de fond */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -34,7 +39,7 @@
             padding: 20px;
         }
 
-        /* Police calligraphique pour le texte */
+        /* Animation de texte avec effet calligraphique */
         .header-text {
             opacity: 0;
             white-space: nowrap;
@@ -43,6 +48,7 @@
             font-size: 3rem;
         }
 
+        /* Animation d'apparition et de disparition du texte dans l'en-tête */
         @keyframes slide-in-out {
             0% { opacity: 0; }
             10% { opacity: 1; }
@@ -51,10 +57,12 @@
             100% { opacity: 0; }
         }
 
+        /* Délais d'apparition du texte pour chaque élément */
         #text-1 { animation-delay: 0s; }
         #text-2 { animation-delay: 4s; }
         #text-3 { animation-delay: 8s; }
 
+        /* Flèche pour indiquer le scroll vers le bas */
         .scroll-arrow {
             margin-top: 20px;
             font-size: 4rem;
@@ -62,11 +70,13 @@
             animation: bounce 1.5s infinite;
         }
 
+        /* Animation de rebond pour la flèche */
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(15px); }
         }
 
+        /* Style des sections */
         .section {
             padding: 50px 0;
             margin: 30px 0;
@@ -79,11 +89,13 @@
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
+        /* Transition d'apparition des sections au scroll */
         .section.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
+        /* Style des titres de sections */
         .section h2 {
             color: #006699;
             margin-bottom: 30px;
@@ -92,20 +104,21 @@
             font-size: 2rem;
         }
 
+        /* Style pour les paragraphes et les listes dans les sections */
         .section p, .section ul {
             font-size: 1.1rem;
             margin: 0 auto;
             max-width: 80%;
         }
 
-        /* Détails en plus */
+        /* Détails supplémentaires */
         .detail-item {
             color: black;
             font-size: 1.1rem;
             margin-bottom: 15px;
         }
 
-        /* Styles identiques pour "18 ans", "Permis B", et "Piscines Desjoyaux" */
+        /* Style spécifique pour les informations d'expérience et d'âge */
         .same-style {
             color: #333;
             font-size: 1.1rem;
@@ -113,6 +126,7 @@
             margin-bottom: 15px;
         }
 
+        /* Style des sous-titres */
         .details-h2 {
             color: #333;
             font-size: 1.25rem;
@@ -120,7 +134,7 @@
             margin-bottom: 15px;
         }
 
-        /* Bouton personnalisé */
+        /* Bouton de téléchargement personnalisé */
         .btn-custom {
             background-color: #006699;
             color: white;
@@ -136,6 +150,7 @@
             background-color: #004d66;
         }
 
+        /* Style du pied de page */
         footer {
             background-color: #2c3e50;
             color: white;
@@ -146,6 +161,7 @@
 </head>
 <body>
 
+<!-- En-tête animé avec des messages changeants -->
 <div id="animated-header">
     <div class="header-text" id="text-1">Maxime Pascal</div>
     <div class="header-text" id="text-2">Alternant à l'IRUP</div>
@@ -153,6 +169,7 @@
     <div class="scroll-arrow">⬇️</div>
 </div>
 
+<!-- Section "Détails en plus" avec âge et permis -->
 <section id="details-en-plus" class="section">
     <h1 class="h2" style="color: #006699; margin-bottom: 30px; font-weight: 700; text-transform: uppercase; font-size: 2rem;">
         Détails en plus
@@ -161,6 +178,7 @@
     <h3 class="same-style"><strong>Permis B : Validé</strong></h3>
 </section>
 
+<!-- Section "Expériences" pour le parcours professionnel -->
 <section id="experiences" class="section">
     <h2>Expériences</h2>
     <h3 class="same-style">Piscines Desjoyaux - Stage d'observation (14-18 novembre 2022)</h3>
@@ -169,6 +187,7 @@
     <p>Service Informatique</p>
 </section>
 
+<!-- Section "Compétences" pour les capacités techniques -->
 <section id="competences" class="section">
     <h2>Compétences</h2>
     <ul>
@@ -178,12 +197,14 @@
     </ul>
 </section>
 
+<!-- Section "Formation" pour le parcours éducatif -->
 <section id="formation" class="section">
     <h2>Formation</h2>
     <p><strong>Baccalauréat Général</strong> (Spécialité Mathématiques / Informatique et sciences du numérique)</p>
     <p>Lycée Saint-Pierre, Montrond-les-Bains</p>
 </section>
 
+<!-- Section "Informations personnelles" pour les coordonnées -->
 <section id="infos-personnelles" class="section">
     <h2>Informations personnelles</h2>
     <ul class="list-unstyled">
@@ -193,6 +214,7 @@
     </ul>
 </section>
 
+<!-- Section "Centres d'intérêt" -->
 <section id="interets" class="section">
     <h2>Centres d'intérêt</h2>
     <ul>
@@ -202,34 +224,34 @@
     </ul>
 </section>
 
+<!-- Section pour télécharger le CV en PDF -->
 <section id="telecharger-cv" class="section">
     <h2>Télécharger mon CV</h2>
     <a href="documents/cv_maxime_pascal.pdf" class="btn btn-custom" download="Maxime_Pascal_CV.pdf">Télécharger mon CV</a>
 </section>
 
+<!-- Pied de page -->
 <footer>
     <p>&copy; 2024 Maxime Pascal | Tous droits réservés</p>
 </footer>
 
 <script>
+    // Fonction pour vérifier si un élément est visible dans la fenêtre d'affichage
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
     }
 
-    function handleScroll() {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
+    // Écouter l'événement de défilement et ajouter la classe visible
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.section').forEach((section) => {
             if (isInViewport(section)) {
                 section.classList.add('visible');
             }
         });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll);
+    });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 <!-- voir avec le prof! (h3 en h2) -->
